@@ -1,17 +1,56 @@
-html{
+html {
     box-sizing: border-box;
-}
-
-*, *:before, *:after{
+  }
+  
+  *,
+  *:before,
+  *:after {
     box-sizing: inherit;
-}
+  }
 
-body{
-    background-color: blue;
-    color: white
-}
+  h1 {
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0.15em;
+  }
 
-button{
-background-color: teal;
-color: white;
-}
+  h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: normal;
+    font-size: x-large;
+  }
+
+  h3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: normal;
+    font-size: xx-large;
+  }
+  
+  body {
+    background-color: #232218;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+  }
+  
+  /* div {
+    border: 1px solid red;
+  } */
+  
+  .area {
+    min-height: 750px;
+  }
+  
+  .spacer {
+    min-height: 75px;
+  }
+  
+  #splash {
+    min-height: 800px;
+    background: url("/images/bg_parchment.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  
