@@ -53,4 +53,36 @@ html {
     background-size: cover;
     background-attachment: fixed;
   }
+
+  .contact-form {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
   
+  .contact-form label {
+    color: black; 
+  }
+
+  .btn-primary {
+    background-color: #4c0431;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #600540;
+    transform: translateY(-2px);
+  }
+  
+  .btn-primary:active {
+    background-color: #3a0325;
+    transform: translateY(0);
+  }
