@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Website Banner</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      color: #333333; /* Default text color */
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .content-wrapper {
+      flex: 1;
+    }
+    .banner {
+      position: relative;
+      height: 100vh;
+      background: url('images/bg_parchment.png') no-repeat center center/cover;
+      color: #fff;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.3); /* Lighter overlay */
+    }
+    .content {
+      position: relative;
+      z-index: 2;
+    }
+    .content h1 {
+      font-size: 4rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adding text shadow */
+    }
+    .content p {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .section {
+      padding: 4rem 0;
+      color: #fff; /* Set section text color to white */
+    }
+    .section img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .section.bg-dark-sage {
+      background-color: #556b2f; /* Dark Sage Green */
+    }
+    .section.bg-olive {
+      background-color: #6b8e23; /* Olive Green */
+    }
+    .section-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .section-content .text,
+    .section-content .image {
+      flex: 1;
+      padding: 1rem;
+    }
+    @media (max-width: 768px) {
+      .section-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      .section-content .text,
+      .section-content .image {
+        flex: none;
+        max-width: 100%;
+      }
+      .section-content .image {
+        order: 1;
+      }
+      .section-content .text {
+        order: 2;
+      }
+    }
+    .navbar-custom {
+      background-color: #404a36; /* Dark Olive Green */
+    }
+    .navbar-custom .nav-link,
+    .navbar-custom .btn {
+      color: #fff;
+    }
+    .btn-primary {
+      background-color: #4c0431; /* Dark Purple */
+      border-color: #4c0431;
+    }
+    .btn-primary:hover {
+      background-color: #3b0325;
+      border-color: #3b0325;
+    }
+    .btn-secondary {
+      background-color: #7b445e; /* Muted Mauve */
+      border-color: #7b445e;
+    }
+    .btn-secondary:hover {
+      background-color: #633650;
+      border-color: #633650;
+    }
+    h2 {
+      color: #fff; /* White for better contrast */
+    }
+    .footer-custom {
+      background-color: #404a36; /* Dark Olive Green */
+      color: #fff;
+      padding: 1rem 0;
+      width: 100%;
+      text-align: center; /* Centered text for footer */
+    }
+    .footer-custom .footer-left {
+      float: left;
+    }
+    .footer-custom .footer-right {
+      float: right;
+    }
+    .footer-custom img {
+      width: 24px;
+      height: 24px;
+      margin-left: 10px;
+    }
+    @media (max-width: 768px) {
+      .footer-custom .footer-left,
+      .footer-custom .footer-right {
+        float: none;
+        text-align: center;
+        display: block;
+      }
+      .footer-custom img {
+        margin-left: 0;
+        margin-right: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#featured">Featured</a>
+          </li>
+          <li class="nav-item">
+          <li class="nav-item">
+            <a class="nav-link" href="/projects.html">Projects</a>
+          </li>
+          <a class="nav-link" href="#about">Artist</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact.html">Contact</a>
+          </li>
+          <li class="d-none nav-item only-artist">
+            <a class="nav-link" href="/new-project">New</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="btn btn-primary" href="http://www.google.com">Connect Wallet</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="content-wrapper">
+    <header class="banner">
+      <div class="overlay"></div>
+      <div class="content">
+        <h1>Amy Zinger</h1>
+        <p>Creative Director | Serial Tinkerer | Gentlewoman Adventurer</p>
+      </div>
+    </header>
+
+    <section class="section bg-dark-sage">
+      <div class="container">
+        <div class="section-content">
+          <div class="image">
+            <img src="images/curiosity_cabinet.png" alt="Section One Image">
+          </div>
+          <div class="text">
+            <h2>Featured Work</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+            <a href="#primary-action" class="btn btn-primary">View Project</a>
+            <a href="#secondary-action" class="btn btn-secondary ml-2">Explore More Projects</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-olive">
+      <div class="container">
+        <div class="section-content">
+          <div class="image">
+            <img src="images/AmyZinger.jpg" alt="Section Two Image">
+          </div>
+          <div class="text">
+            <h2>About Amy</h2>
+            <p>Amy Zinger believes everyone and everything has a story to tell. As a creative director and 
+              writer, she's told stories for some of the world's most well-known brands, and as a soprano, she's
+              brought some of opera's most iconic characters to life&mdash;including the Queen of 
+              the Night. Her other interests include coding (badly), photography (passably), cooking (well), 
+              and playing chess (also badly). Amy lives in Dallas, Texas, with her husband, daughter, and 
+              three ridiculous dogs. She is never bored.</p>
+            <a href="#primary-action2" class="btn btn-primary">Primary Action</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer class="footer-custom">
+    <div class="container">
+      <div class="footer-left">
+        <p>&copy; 2024, Amy Zinger</p>
+      </div>
+      <div class="footer-right">
+        <a href="https://github.com/" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub">
+        </a>
+        <a href="https://www.linkedin.com/" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
