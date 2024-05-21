@@ -1,145 +1,242 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-  <title>Amy Zinger's NFT Mint</title>
-  <meta name="author" content="Amy Zinger">
-  <meta name="description" content="A personal NFT mint for artist Amy Zinger.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">  
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-  <link rel="stylesheet" href="/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <title>Amy Zinger's NFT Mint</title>
+    <meta name="author" content="Amy Zinger">
+    <meta name="description" content="A personal NFT mint for artist Amy Zinger.">    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            padding-top: 56px; /* navbar height */
+        }
+        .banner {
+            background: url('images/bg_parchment.png') no-repeat center center;
+            background-size: cover;
+            height: 60vh;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .content-section {
+            padding: 2rem 0;
+            background-color: #e6e8e6; 
+            color: #333; 
+        }
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        footer {
+            background-color: #2e2f2b; 
+            padding: 1rem 0;
+            text-align: center;
+            color: #ffffff; 
+        }
+        footer .social-icons {
+            margin: 0.5rem 0;
+        }
+        footer .social-icons a {
+            margin: 0 0.5rem;
+            color: #ffffff; 
+        }
+        .btn-primary {
+            background-color: #4c0431; 
+            border-color: #4c0431;
+        }
+        .btn-primary:hover {
+            background-color: #3b0325;
+            border-color: #3b0325;
+        }
+        .btn-secondary {
+            background-color: #7b445e; 
+            border-color: #7b445e;
+        }
+        .btn-secondary:hover {
+            background-color: #633650;
+            border-color: #633650;
+        }
+        .btn-disabled {
+            background-color: #a3a3a3; 
+            border-color: #a3a3a3;
+            color: #6c757d;
+            cursor: not-allowed;
+        }
+        .navbar {
+            background-color: #2e2f2b; 
+        }
+        .navbar .navbar-brand, .navbar .nav-link, .navbar .btn {
+            color: #ffffff; 
+        }
+        .navbar .nav-link:hover {
+            color: #c9b8c0; 
+        }
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+        .contact-section {
+            padding: 2rem 0;
+            background-color: #e6e8e6; 
+        }
+        .contact-form .form-control, .contact-form .btn {
+            background-color: #ffffff;
+            border: 1px solid #333;
+        }
+        .contact-form label {
+            color: #333;
+        }
+        .contact-form .btn-primary {
+            background-color: #4c0431;
+            border-color: #4c0431;
+        }
+        .contact-form .btn-primary:hover {
+            background-color: #3b0325;
+            border-color: #3b0325;
+        }
+    </style>
 </head>
-
 <body>
-  <div id="testButton" class="btn btn-warning">Click me</div>
-  <!-- Header area -->
-  <header>
-    <nav id="top-nav" class="navbar navbar-expand navbar-dark fixed-top bg-dark" aria-label="Navbar">
-      <div class="container-fluid">
-        <div class="collapse navbar-collapse">
-          <ul class="navbar-nav me-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#featured">Featured</a>
-            </li>
-            <li class="nav-item">
-            <li class="nav-item">
-              <a class="nav-link" href="/projects.html">Projects</a>
-            </li>
-            <a class="nav-link" href="#about">Artist</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/contact.html">Contact</a>
-            </li>
-            <li class="d-none nav-item only-artist">
-              <a class="nav-link" href="/new-project">New</a>
-            </li>
-          </ul>
-          <div>
-            <button id="wallet-connect" type="button" class="btn btn-primary btn-block">Connect
-              Wallet</button>
-          </div>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">FPO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#featured">Featured</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Artist</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/projects.html">Projects</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="/newProject.html">New</a>
+                  </li>
+                </ul>
+            </div>
+            <div class="d-flex">
+                <button class="btn btn-primary" type="button">Connect Wallet</button>
+            </div>
         </div>
-      </div>
     </nav>
-  </header>
 
-  <main>
-    <!-- Splash page -->
-    <section>
-      <div id="splash" class="area">
-        <div id="hero-text" class="position-absolute top-50 start-50 translate-middle text-light text-center">
-          <h1 class="display-1">AMY ZINGER</h1>
-          <h2>Creative Director | Serial Tinkerer | Gentlewoman Adventurer</h2>
+    <!-- Header (Banner Area) -->
+    <header class="banner">
+        <div class="container">
+            <h1 class="display-4">Amy Zinger</h1>
+            <p class="lead">Creative Director | Serial Tinkerer | Gentlewoman Adventurer</p>
         </div>
-      </div>
-    </section>
+    </header>
 
-    <!-- Featured project area -->
-    <section>
-      <div id="featured" class="area">
-        <div class="spacer"></div>
-        <div class="row justify-content-center">
-          <div class="col-10 text-center justify-content-center">
-            <h3>Featured Project</h3>
-            <div class="row">
-              <div id="featuredImage" class="col-7 m-2">
-                <img class="me-auto img-fluid" src="./images/curiosity_cabinet.png" role="img" alt="featured project image">
-              </div>
-              <div id="featuredInfo" class="text-start col-3 m-2 text-light">
-                <div>Name: Powered by Curiosity WIP</div>
-                <div>Description: An untextured, 90% functional three.js proof of concept for my future creative portfolio site.</div>
-                <div>Editions: 1</div>
-                <div>Price: Not for sale</div>
-                <div>Opens: When I have time</div>
-                <div>
-                  <a href="/project.html"><button id="goToFeaturedProjectButton" type="button"
-                      class="m-2 btn btn-primary btn-block">View Project</button></a>
+    <!-- Main Content -->
+    <main>
+        <section class="content-section bg-light" id="featured">
+            <div class="container">
+                <h2 class="section-title">Featured Work</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="images/curiosity_cabinet.png" alt="Description of image 1" class="img-fluid rounded">
+                    </div>
+                    <div class="col-md-6">
+                      <div>Name: Powered by Curiosity WIP</div>
+                      <div>Description: An untextured, 90% functional three.js proof of concept for my future creative portfolio site.</div>
+                      <div>Editions: 1</div>
+                      <div>Price: Not for sale</div>
+                      <div>Opens: When I have time</div>
+                       <!-- Primary and Secondary Buttons -->
+                       <a href="/project.html"><button class="btn btn-primary mt-3">View Project</button></a><br>
+                       <a href="/projects.html"><button class="btn btn-secondary mt-3">Explore More Work</button></a>
+                    </div>
                 </div>
-                <div><a href="/projects.html"><button id="allProejctsButton" type="button"
-                      class="m-2 btn btn-primary btn-block">See All
-                      Projects</button></a></div>
-              </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!-- About me area -->
-    <section>
-      <div id="about" class="area">
-        <div class="spacer"></div>
-        <div class="row justify-content-center">
-          <div class="col-10 text-center justify-content-center">
-            <h3>About Amy</h3>
-            <div class="row">
-              <div id="featuredInfo" class="col-5 m-2 mt-5 text-light text-end justify-content-end">
-                <div>
-                  Amy Zinger believes everyone and everything has a story to tell. As a creative director and 
-                  writer, she's told stories for some of the world's most famous brands, and as a soprano, she's
-                  brought some of opera's most well-known characters to life&mdash;including the iconic Queen of 
-                  the Night. Her other interests include coding (badly), photography (passably), cooking (well), 
-                  and playing chess (also badly). Amy lives in Dallas, Texas, with her husband, daughter, and 
-                  three ridiculous dogs. She is never bored.</div>
-                <div><a href="/contact.html"><button id="goToContactPageButton" type="button"
-                      class="m-2 btn btn-primary btn-block">Contact
-                      me</button></a></div>
-              </div>
-              <div id="featuredImage" class="col-5 m-2 justify-content-start">
-                <img class="me-auto img-fluid" src="./images/AmyZinger.jpg" role="img" alt="artist image">
-              </div>
+        <section class="content-section" id="about">
+            <div class="container">
+                <h2 class="section-title">About Amy</h2>
+                <div class="row">
+                    <div class="col-md-6 order-md-2">
+                        <img src="images/AmyZinger.jpg" alt="Description of image 2" class="img-fluid rounded">
+                    </div>
+                    <div class="col-md-6 order-md-1">
+                      <div>
+                        Amy Zinger believes everyone and everything has a story to tell. As a creative director and 
+                        writer, she's told stories for some of the world's most well-known brands, and as a soprano, she's
+                        brought some of opera's most beloved characters to life&mdash;including the iconic Queen of 
+                        the Night. Her other interests include coding (badly), photography (passably), cooking (well), 
+                        and playing chess (also badly). Amy lives in Dallas, Texas, with her husband, daughter, and 
+                        three ridiculous dogs. She is never bored.
+                      </div>                    </div>
+                </div>
             </div>
-          </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="content-section bg-light" id="contact">
+            <div class="container">
+                <h2 class="section-title">Questions or comments?</h2>
+                <p>I'd love to hear from you. Please fill out the form and I'll be in touch as soon as possible.</p>
+                <div class="contact-form">
+                    <form id="contact-form" novalidate>
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <label for="contact-first">First Name</label>
+                                <input type="text" class="form-control" id="contact-first" placeholder="Jane" required>
+                                <div class="invalid-feedback">Please enter your first name.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="contact-last">Last Name</label>
+                                <input type="text" class="form-control" id="contact-last" placeholder="Doe" required>
+                                <div class="invalid-feedback">Please enter your last name.</div>
+                            </div>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label for="contact-email-addr">Email address</label>
+                            <input type="email" class="form-control" id="contact-email-addr" placeholder="jane.doe@example.com" required>
+                            <div class="invalid-feedback">Please enter a valid email address.</div>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label for="contact-question">Message</label>
+                            <textarea class="form-control" id="contact-question" rows="5" placeholder="Enter your message" required></textarea>
+                            <div class="invalid-feedback">Please enter your message.</div>
+                        </div>
+                        <button type="submit" id="send-contact" class="btn btn-primary btn-block">Submit</button>
+                        <div id="contact-button-response" class="mt-3"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024, Amy Zinger</p>
+            <div class="social-icons">
+                <a href="https://github.com/" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github fa-2x"></i></a>
+                <a href="https://www.linkedin.com/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin fa-2x"></i></a>
+            </div>
         </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer area -->
-  <div class="container">
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-      <div class="col-md-4 d-flex align-items-center">
-        <a href="/" class="mb-3 me-2 mb-md-0 text-white text-decoration-none lh-1">
-          <svg class="bi" width="30" height="24">
-            <use xlink:href="#bootstrap" />
-          </svg>
-        </a>
-        <span class="mb-3 mb-md-0 text-white">&copy; 2024 Amy Zinger</span>
-      </div>
-
     </footer>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-    crossorigin="anonymous"></script>
-  <script type="module" src="./js/index.js"></script>
-</body>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="./js/contact.js"></script>
+
+</body>
 </html>

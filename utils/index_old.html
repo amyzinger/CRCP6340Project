@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <title>Amy Zinger's NFT Mint</title>
+  <meta name="author" content="Amy Zinger">
+  <meta name="description" content="A personal NFT mint for artist Amy Zinger.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="testButton" class="btn btn-warning">Click me</div>
+  <!-- Header area -->
+  <header>
+    <nav id="top-nav" class="navbar navbar-expand navbar-dark fixed-top bg-dark" aria-label="Navbar">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#featured">Featured</a>
+            </li>
+            <li class="nav-item">
+            <li class="nav-item">
+              <a class="nav-link" href="/projects.html">Projects</a>
+            </li>
+            <a class="nav-link" href="#about">Artist</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact.html">Contact</a>
+            </li>
+            <li class="d-none nav-item only-artist">
+              <a class="nav-link" href="/new-project">New</a>
+            </li>
+          </ul>
+          <div>
+            <button id="wallet-connect" type="button" class="btn btn-primary btn-block">Connect
+              Wallet</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Splash page -->
+    <section>
+      <div id="splash" class="area">
+        <div id="hero-text" class="position-absolute top-50 start-50 translate-middle text-light text-center">
+          <h1 class="display-1">AMY ZINGER</h1>
+          <h2>Creative Director | Serial Tinkerer | Gentlewoman Adventurer</h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured project area -->
+    <section>
+      <div id="featured" class="area">
+        <div class="spacer"></div>
+        <div class="row justify-content-center">
+          <div class="col-10 text-center justify-content-center">
+            <h3>Featured Project</h3>
+            <div class="row">
+              <div id="featuredImage" class="col-7 m-2">
+                <img class="me-auto img-fluid" src="./images/curiosity_cabinet.png" role="img" alt="featured project image">
+              </div>
+              <div id="featuredInfo" class="text-start col-3 m-2 text-light">
+                <div>Name: Powered by Curiosity WIP</div>
+                <div>Description: An untextured, 90% functional three.js proof of concept for my future creative portfolio site.</div>
+                <div>Editions: 1</div>
+                <div>Price: Not for sale</div>
+                <div>Opens: When I have time</div>
+                <div>
+                  <a href="/project.html"><button id="goToFeaturedProjectButton" type="button"
+                      class="m-2 btn btn-primary btn-block">View Project</button></a>
+                </div>
+                <div><a href="/projects.html"><button id="allProejctsButton" type="button"
+                      class="m-2 btn btn-primary btn-block">See All
+                      Projects</button></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About me area -->
+    <section>
+      <div id="about" class="area">
+        <div class="spacer"></div>
+        <div class="row justify-content-center">
+          <div class="col-10 text-center justify-content-center">
+            <h3>About Amy</h3>
+            <div class="row">
+              <div id="featuredInfo" class="col-5 m-2 mt-5 text-light text-end justify-content-end">
+                <div>
+                  Amy Zinger believes everyone and everything has a story to tell. As a creative director and 
+                  writer, she's told stories for some of the world's most famous brands, and as a soprano, she's
+                  brought some of opera's most well-known characters to life&mdash;including the iconic Queen of 
+                  the Night. Her other interests include coding (badly), photography (passably), cooking (well), 
+                  and playing chess (also badly). Amy lives in Dallas, Texas, with her husband, daughter, and 
+                  three ridiculous dogs. She is never bored.</div>
+                <div><a href="/contact.html"><button id="goToContactPageButton" type="button"
+                      class="m-2 btn btn-primary btn-block">Contact
+                      me</button></a></div>
+              </div>
+              <div id="featuredImage" class="col-5 m-2 justify-content-start">
+                <img class="me-auto img-fluid" src="./images/AmyZinger.jpg" role="img" alt="artist image">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer area -->
+  <div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <div class="col-md-4 d-flex align-items-center">
+        <a href="/" class="mb-3 me-2 mb-md-0 text-white text-decoration-none lh-1">
+          <svg class="bi" width="30" height="24">
+            <use xlink:href="#bootstrap" />
+          </svg>
+        </a>
+        <span class="mb-3 mb-md-0 text-white">&copy; 2024 Amy Zinger</span>
+      </div>
+
+    </footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+  <script type="module" src="./js/index.js"></script>
+</body>
+
+</html>
