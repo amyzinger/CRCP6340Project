@@ -1,88 +1,97 @@
-html {
-    box-sizing: border-box;
-  }
-  
-  *,
-  *:before,
-  *:after {
-    box-sizing: inherit;
-  }
+body {
+  padding-top: 56px; 
+}
+h1 {
+font-family: "Sedan SC", serif;
+font-weight: 400;
+font-style: normal;
+}
 
-  h1 {
-    font-family: "Cinzel Decorative", serif;
-    font-weight: 700;
-    font-style: normal;
-    letter-spacing: 0.15em;
-  }
-
-  h2 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-style: normal;
-    font-size: x-large;
-  }
-
-  h3 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-style: normal;
-    font-size: xx-large;
-  }
-  
-  body {
-    background-color: #232218;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #ffffff;
-  }
-  
-  /* div {
-    border: 1px solid red;
-  } */
-  
-  .area {
-    min-height: 750px;
-  }
-  
-  .spacer {
-    min-height: 75px;
-  }
-  
-  #splash {
-    min-height: 800px;
-    background: url("/images/bg_parchment.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-  }
-
-  .contact-form {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 15px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .contact-form label {
-    color: black; 
-  }
-
-  .btn-primary {
-    background-color: #4c0431;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .btn-primary:hover {
-    background-color: #600540;
-    transform: translateY(-2px);
-  }
-  
-  .btn-primary:active {
-    background-color: #3a0325;
-    transform: translateY(0);
-  }
+.banner {
+  background: url('/images/bg_parchment.png') no-repeat center center;
+  background-size: cover;
+  height: 60vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.content-section {
+  padding: 2rem 0;
+  background-color: #b9c1b9;
+  color: #333;
+}
+.content-section.section2 {
+  background-color: #d4d4d4; 
+}
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+footer {
+  background-color: #2e2f2b;
+  padding: 1rem 0;
+  text-align: center;
+  color: #ffffff;
+}
+footer .social-icons {
+  margin: 0.5rem 0;
+}
+footer .social-icons a {
+  margin: 0 0.5rem;
+  color: #ffffff;
+}
+.btn-primary {
+  background-color: #4c0431;
+  border-color: #4c0431;
+}
+.btn-primary:hover {
+  background-color: #3b0325;
+  border-color: #3b0325;
+}
+.btn-secondary {
+  background-color: #7b445e;
+  border-color: #7b445e;
+}
+.btn-secondary:hover {
+  background-color: #633650;
+  border-color: #633650;
+}
+.btn-disabled {
+  background-color: #a3a3a3;
+  border-color: #a3a3a3;
+  color: #333333;
+  cursor: not-allowed;
+}
+.navbar {
+  background-color: #2e2f2b;
+}
+.navbar .navbar-brand, .navbar .nav-link, .navbar .btn {
+  color: #ffffff;
+}
+.navbar .nav-link:hover {
+  color: #c9b8c0;
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+.contact-section {
+  padding: 2rem 0;
+  background-color: #e6e8e6;
+}
+.contact-form .form-control, .contact-form .btn {
+  background-color: #ffffff;
+  border: 1px solid #333;
+}
+.contact-form label {
+  color: #333;
+}
+.contact-form .btn-primary {
+  background-color: #4c0431;
+  border-color: #4c0431;
+}
+.contact-form .btn-primary:hover {
+  background-color: #3b0325;
+  border-color: #3b0325;
+}
