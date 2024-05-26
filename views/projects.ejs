@@ -21,11 +21,13 @@
    
     <div>Projects</div>
 
+    <% projectArray.forEach((item, index) => { %>
+
     <div>
-        <%=projectArray %>
+        <a href="/project/<%= index + 1 %>"><%= item %></a>
     </div>
 
-
+<% }); %>
 
 
 <div class-"container-fluid">

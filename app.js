@@ -18,6 +18,14 @@ app.get("/projects", (req, res) => {
   res.render("projects.ejs", {projectArray: data});
 });
 
+app.get("/project/:id", (req, res) => {
+  let id = req.params.id;
+  if (id > data.length) {
+  throw new Error("No project with that ID");
+  }
+  res.render("project.ejs", {projectArray: data, which:id});
+});
+
 app.get("/newProject", (req, res) => {
   res.render("newProject.ejs");
 });
@@ -35,6 +43,11 @@ app.post("/mail", async (req, res) => {
     .catch(() => {
       res.send({ result: "failure" });
     });
+});
+
+app.use((err, req, res, next) => {
+  console.log(err);
+  res.render("error.ejs");
 });
 
 app.listen(port, () => {
