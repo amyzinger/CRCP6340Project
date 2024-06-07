@@ -32,15 +32,9 @@
             <div class="container">
                 <h2 class="section-title">Featured Work</h2>
                 <div class="row">
-                    <div class="col-md-6">
-                        <img src="images/curiosity_cabinet.png" alt="Description of image 1" class="img-fluid rounded">
-                    </div>
-                    <div class="col-md-6">
-                        <div>Name: Powered by Curiosity WIP</div>
-                        <div>Description: An untextured, 90% functional three.js proof of concept for my future creative portfolio site.</div>
-                        <div>Editions: 1</div>
-                        <div>Price: Not for sale</div>
-                        <div>Opens: When I have time</div>
+                    <div class="col-5">
+                        <%- include('projectCard', {image: featuredProject.img_url, name: featuredProject.project_name, ident: featuredProject.id}); %>
+                      </div>
                         <!-- Primary and Secondary Buttons -->
                         <a href="/project"><button class="btn btn-primary mt-3">View Project</button></a><br>
                         <a href="/projects"><button class="btn btn-secondary mt-3">Explore More Work</button></a>

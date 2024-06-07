@@ -37,10 +37,6 @@ app.get("/project/:id", (req, res) => {
   res.render("project.ejs", { project: projects[id - 1], which: id });
 });
 
-// app.get("/contact", (req, res) => {
-//   res.render("contact.ejs");
-// });
-
 app.post("/mail", async (req, res) => {
   await utils
     .sendMessage(req.body.sub, req.body.txt)
