@@ -54,7 +54,7 @@ app.use(async (err, req, res, next) => {
   msg = err.message;
   if (msg != "No project with that ID") {
     msg =
-      "There was an internal error. Apologies. We are working on cleaning up the mess.";
+      "Oops! There was an internal error.";
   }
   res.render("error.ejs", { msg: msg });
 });

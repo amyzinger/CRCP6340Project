@@ -20,25 +20,28 @@
    <%- include('navigation') %>
 
     <!-- <div>Project</div> -->
-    <!-- <div>Project Page for <%=which %></div>   -->
 
     <section>
         <div class="row text-center justify-content-center">
           <div class="col-10 mb-5">
             <div class="row justify-content-center">
               <div class="col-12 col-md-4 mt-4">
+                
                 <div class="card m-2">
-                  <img src=<%=`.${project.img_url}`  %> class="card-img-top" alt="..." />
+                  <img src=<%=project.img_url  %> class="card-img-top" alt="..." />
                   <div>
                     <div class="card-title">
                       <h2><%=project.project_name  %></h2>
                     </div>
                   </div>
+
                   <div class="card-footer">
                     <a id="mint-button" class="btn btn-primary">Mint</a>
                   </div>
+                  
                 </div>
               </div>
+
               <div class="cal-10 col-md-6 mt-2 text-start">
                 <p>
                 <h3 class="topic">Project name: </h3><%=project.project_name  %></p>
