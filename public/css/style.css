@@ -95,3 +95,19 @@ footer .social-icons a {
   background-color: #3b0325;
   border-color: #3b0325;
 }
+
+@keyframes fadeInAnimation {
+  /*for div fade-in */
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadein {
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
