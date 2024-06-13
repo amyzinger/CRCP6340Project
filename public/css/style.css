@@ -8,7 +8,7 @@ font-style: normal;
 }
 
 .banner {
-  background: url('/images/bg_parchment.png') no-repeat center center;
+  background: url('/images/bg_parchment.webp') no-repeat center center;
   background-size: cover;
   height: 60vh;
   color: white;
