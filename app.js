@@ -19,8 +19,8 @@ app.get("/", async (req, res, next) => {
       // query the database for project records
       projects = await db.getAllProjects();
       console.log(projects);
-      let featuredRand = Math.floor(Math.random() * projects.length);
-      res.render("index.ejs", { featuredProject: projects[featuredRand] });
+      // Pass the first three projects to the template
+      res.render("index.ejs", { projects: projects.slice(0, 3) });
     })
     .catch(next);
 });
@@ -35,6 +35,14 @@ app.get("/project/:id", (req, res) => {
     throw new Error("No project with that ID");
   }
   res.render("project.ejs", { project: projects[id - 1], which: id });
+});
+
+app.get("/about", (req, res) => {
+  res.render("about.ejs");
+});
+
+app.get("/contact", (req, res) => {
+  res.render("contact.ejs");
 });
 
 app.post("/mail", async (req, res) => {

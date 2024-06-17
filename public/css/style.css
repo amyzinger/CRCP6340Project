@@ -1,99 +1,132 @@
 body {
-  padding-top: 56px; 
+  background-color: #F9F9F9; /* Very Light Gray */
+  color: #333333; /* Dark Gray */
+  padding-top: 70px; /* Adjusted padding to account for taller navbar */
 }
+
 h1 {
-font-family: "Sedan SC", serif;
-font-weight: 400;
-font-style: normal;
+  font-family: "Sedan SC", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #333333; /* Dark Gray */
 }
 
 .banner {
-  background: url('/images/bg_parchment.webp') no-repeat center center;
-  background-size: cover;
+  background-color: #F9F9F9; /* Very Light Gray */
   height: 60vh;
-  color: white;
+  color: #333333; /* Dark Gray */
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
+
 .content-section {
   padding: 2rem 0;
-  background-color: #b9c1b9;
-  color: #333;
+  background-color: #FFFFFF; /* White */
+  color: #333333; /* Dark Gray */
 }
+
 .content-section.section2 {
-  background-color: #d4d4d4; 
+  background-color: #F2F2F2; /* Off-White */
 }
+
 .section-title {
   font-size: 2rem;
   margin-bottom: 1rem;
+  color: #333333; /* Dark Gray */
 }
+
 footer {
-  background-color: #2e2f2b;
+  background-color: #FFFFFF; /* White */
   padding: 1rem 0;
   text-align: center;
-  color: #ffffff;
+  color: #333333; /* Dark Gray */
 }
+
 footer .social-icons {
   margin: 0.5rem 0;
 }
+
 footer .social-icons a {
   margin: 0 0.5rem;
-  color: #ffffff;
+  color: #666666; /* Medium Gray */
 }
-.btn-primary {
-  background-color: #4c0431;
-  border-color: #4c0431;
+
+.button {
+  background-color: #333333; /* Dark Charcoal */
+  border: none; /* Removed border for clean look */
+  color: #FFFFFF; /* White */
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
 }
-.btn-primary:hover {
-  background-color: #3b0325;
-  border-color: #3b0325;
+
+.button:hover {
+  background-color: #1A1A1A; /* Darker Charcoal */
 }
-.btn-secondary {
-  background-color: #7b445e;
-  border-color: #7b445e;
-}
-.btn-secondary:hover {
-  background-color: #633650;
-  border-color: #633650;
-}
-.btn-disabled {
-  background-color: #a3a3a3;
-  border-color: #a3a3a3;
-  color: #333333;
-  cursor: not-allowed;
-}
+
 .navbar {
-  background-color: #2e2f2b;
+  background-color: #FFFFFF; /* White */
+  height: 80px; /* Increased height for taller navbar */
 }
-.navbar .navbar-brand, .navbar .nav-link, .navbar .btn {
-  color: #ffffff;
+
+.navbar .navbar-brand {
+  font-family: 'Sedan SC', serif; /* Sedan Font for Brand */
+  color: #333333; /* Dark Gray */
+  font-size: 2rem; /* Larger font size for prominence */
+  font-weight: bold; /* Bold for emphasis */
 }
+
+.navbar .nav-link {
+  color: #333333; /* Dark Gray */
+  font-size: 1rem; /* Adjust font size for better balance */
+}
+
 .navbar .nav-link:hover {
-  color: #c9b8c0;
+  color: #555555; /* Medium Charcoal */
 }
+
 .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(51, 51, 51, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
+
 .contact-section {
   padding: 2rem 0;
-  background-color: #e6e8e6;
+  background-color: #FFFFFF; /* White */
 }
-.contact-form .form-control, .contact-form .btn {
-  background-color: #ffffff;
-  border: 1px solid #333;
+
+.contact-form .form-control {
+  background-color: #FFFFFF; /* White */
+  color: #333333; /* Dark Gray */
+  border: 1px solid #333333;
 }
+
 .contact-form label {
-  color: #333;
+  color: #333333; /* Dark Gray */
+  font-weight: bold;
+  text-align: left;
+  display: block; /* Ensure labels take up the full width */
 }
-.contact-form .btn-primary {
-  background-color: #4c0431;
-  border-color: #4c0431;
+
+.contact-form .form-control::placeholder {
+  color: #aaaaaa;
 }
-.contact-form .btn-primary:hover {
-  background-color: #3b0325;
-  border-color: #3b0325;
+
+.contact-form .form-control:focus {
+  background-color: #F2F2F2; /* Off-White */
+  color: #333333; /* Dark Gray */
+  border-color: #666666;
+  box-shadow: none;
+}
+
+.contact-form .invalid-feedback {
+  color: #FF0000; /* Red for error messages */
+  text-align: left;
 }
 
 @keyframes fadeInAnimation {
@@ -110,4 +143,15 @@ footer .social-icons a {
   animation: fadeInAnimation ease 2s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+}
+
+/* Additional styles for cards */
+.card {
+  transition: transform 0.2s ease-in-out;
+  border: 1px solid #000000; /* Light Gray Border */
+  border-radius: 0;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
