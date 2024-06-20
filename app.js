@@ -35,12 +35,24 @@ app.get("/projects", (req, res, next) => {
 });
 
 // Route for individual project pages
-app.get("/project/:id", (req, res, next) => {
-  let id = parseInt(req.params.id, 10);
-  if (id > 0 && id <= projects.length) {
-    res.render("project.ejs", { project: projects[id - 1], which: id });
-  } else {
-    next(new Error("No project with that ID"));
+app.get("/project/:id", async (req, res, next) => {
+  try {
+    await db.connect();
+    let projects = await db.getAllProjects();
+    let id = parseInt(req.params.id, 10);
+
+    console.log("Projects: ", projects); // Debugging line to log all projects
+    console.log("Project ID: ", id); // Debugging line to log the requested project ID
+
+    if (id > 0 && id <= projects.length) {
+      const project = projects.find(p => p.id === id);
+      console.log("Project: ", project); // Debugging line to log the found project
+      res.render("project.ejs", { project: project, which: id });
+    } else {
+      next(new Error("No project with that ID"));
+    }
+  } catch (error) {
+    next(error);
   }
 });
 

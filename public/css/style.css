@@ -1,20 +1,74 @@
-body {
-  background-color: #F9F9F9; /* Very Light Gray */
-  color: #333333; /* Dark Gray */
-  padding-top: 70px; /* Adjusted padding to account for taller navbar */
+html, body {
+  height: 100%;
+  margin: 0;
 }
 
-h1 {
-  font-family: "Sedan SC", serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #333333; /* Dark Gray */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}
+
+body {
+  background-color: #fafafa;
+  color: #333333;
+  padding-top: 70px;
 }
 
 .banner {
-  background-color: #F9F9F9; /* Very Light Gray */
+  position: relative;
+  height: 100vh;
+  background: url('/images/bg_image.webp') repeat center center;
+  background-size: auto;
+}
+
+.text-box {
+  background-color: rgba(255, 255, 255, 0.9);
+  text-align: left;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.text-box h1 {
+  font-style: normal;
+  color: #333333;
+}
+
+@media (max-width: 1200px) {
+  .text-box h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .text-box h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .text-box {
+    max-width: 100%;
+  }
+
+  .text-box h1 {
+    font-size: 2rem;
+  }
+}
+
+h1 {
+  font-style: normal;
+  color: #333333;
+}
+
+.banner {
+  background-color: transparent;
   height: 60vh;
-  color: #333333; /* Dark Gray */
+  color: #333333;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,25 +77,31 @@ h1 {
 
 .content-section {
   padding: 2rem 0;
-  background-color: #FFFFFF; /* White */
-  color: #333333; /* Dark Gray */
+  color: #333333;
 }
 
 .content-section.section2 {
-  background-color: #F2F2F2; /* Off-White */
+  background-color: transparent;
 }
 
 .section-title {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: #333333; /* Dark Gray */
+  color: #333333;
 }
 
 footer {
-  background-color: #FFFFFF; /* White */
+  background-color: #c0d0d3;
   padding: 1rem 0;
   text-align: center;
-  color: #333333; /* Dark Gray */
+  color: #333333;
+  width: 100%;
+  margin: 0;
+}
+
+footer .container-fluid {
+  width: 100%;
+  padding: 0;
 }
 
 footer .social-icons {
@@ -50,13 +110,13 @@ footer .social-icons {
 
 footer .social-icons a {
   margin: 0 0.5rem;
-  color: #666666; /* Medium Gray */
+  color: #333333;
 }
 
 .button {
-  background-color: #333333; /* Dark Charcoal */
-  border: none; /* Removed border for clean look */
-  color: #FFFFFF; /* White */
+  background-color: #333333;
+  border: none;
+  color: #FFFFFF;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   font-size: 1rem;
@@ -67,28 +127,33 @@ footer .social-icons a {
 }
 
 .button:hover {
-  background-color: #1A1A1A; /* Darker Charcoal */
+  background-color: #1A1A1A;
 }
 
 .navbar {
-  background-color: #FFFFFF; /* White */
-  height: 80px; /* Increased height for taller navbar */
+  background-color: #c0d0d3;
+  height: 80px;
 }
 
 .navbar .navbar-brand {
-  font-family: 'Sedan SC', serif; /* Sedan Font for Brand */
-  color: #333333; /* Dark Gray */
-  font-size: 2rem; /* Larger font size for prominence */
-  font-weight: bold; /* Bold for emphasis */
+  font-family: 'Sedan SC', serif;
+  color: #333333;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .navbar .nav-link {
-  color: #333333; /* Dark Gray */
-  font-size: 1rem; /* Adjust font size for better balance */
+  color: #333333 !important;
+  font-size: 1rem;
 }
 
 .navbar .nav-link:hover {
-  color: #555555; /* Medium Charcoal */
+  color: #333333 !important;
+}
+
+.navbar-toggler {
+  background-color: #ffffff;
+  border: none;
 }
 
 .navbar-toggler-icon {
@@ -97,20 +162,20 @@ footer .social-icons a {
 
 .contact-section {
   padding: 2rem 0;
-  background-color: #FFFFFF; /* White */
+  background-color: transparent;
 }
 
 .contact-form .form-control {
-  background-color: #FFFFFF; /* White */
-  color: #333333; /* Dark Gray */
+  background-color: #FFFFFF;
+  color: #333333;
   border: 1px solid #333333;
 }
 
 .contact-form label {
-  color: #333333; /* Dark Gray */
+  color: #333333;
   font-weight: bold;
   text-align: left;
-  display: block; /* Ensure labels take up the full width */
+  display: block;
 }
 
 .contact-form .form-control::placeholder {
@@ -118,19 +183,18 @@ footer .social-icons a {
 }
 
 .contact-form .form-control:focus {
-  background-color: #F2F2F2; /* Off-White */
-  color: #333333; /* Dark Gray */
+  background-color: #F2F2F2;
+  color: #333333;
   border-color: #666666;
   box-shadow: none;
 }
 
 .contact-form .invalid-feedback {
-  color: #FF0000; /* Red for error messages */
+  color: #FF0000;
   text-align: left;
 }
 
 @keyframes fadeInAnimation {
-  /*for div fade-in */
   0% {
     opacity: 0;
   }
@@ -145,10 +209,9 @@ footer .social-icons a {
   animation-fill-mode: forwards;
 }
 
-/* Additional styles for cards */
 .card {
   transition: transform 0.2s ease-in-out;
-  border: 1px solid #000000; /* Light Gray Border */
+  border: 1px solid #000000;
   border-radius: 0;
 }
 

@@ -14,20 +14,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
     <!-- Navigation Bar -->
     <%- include('navigation') %>
 
-    <!-- Header (Banner Area) -->
-    <header class="banner">
-        <div class="container">
-            <h1 class="display-1">Amy Zinger</h1>
-            <p class="display-14">Creative Director | Serial Tinkerer | Gentlewoman Adventurer</p>
-        </div>
-    </header>
-
     <!-- Main Content -->
-    <main>
+    <main class="flex-grow-1">
+        <!-- Header (Banner Area) -->
+        <header class="banner">
+            <div class="container-fluid h-100 p-0">
+                <div class="row h-100 m-0">
+                    <div class="col-12 col-md-6 d-flex align-items-center justify-content-start p-0">
+                        <div class="text-box p-4 w-100">
+                            <h1 class="display-3"><b>A human artist exploring intimacy lost and gained within our invented worlds.</b></h1>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 d-none d-md-block p-0">
+                        <!-- Empty column for layout purposes -->
+                    </div>
+                </div>
+            </div>
+        </header>
+
         <!-- Featured -->
         <section class="content-section" id="featured">
             <div class="container">
@@ -46,10 +54,8 @@
         </section>
     </main>
 
-    <div class="container-fluid">
-        <!-- Footer -->
-        <%- include('footer') %>
-    </div>
+    <!-- Footer -->
+    <%- include('footer') %>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script type="module" src="./js/index.js"></script>
