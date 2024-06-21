@@ -3,91 +3,94 @@ html, body {
   margin: 0;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
+.navbar, .footer {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-main {
-  flex-grow: 1;
-}
-
-body {
-  background-color: #fafafa;
-  color: #333333;
-  padding-top: 70px;
-}
-
-.banner {
-  position: relative;
-  height: 100vh;
+.header-image {
   background: url('/images/bg_image.webp') repeat center center;
   background-size: auto;
+  height: 500px;
+  position: relative;
 }
 
-.text-box {
-  background-color: rgba(255, 255, 255, 0.9);
-  text-align: left;
+.header-overlay {
+  background: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
   height: 100%;
+  padding: 2rem;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
-.text-box h1 {
-  font-style: normal;
-  color: #333333;
+.header-overlay h1 {
+  font-size: 4rem;
 }
 
 @media (max-width: 1200px) {
-  .text-box h1 {
+  .header-overlay h1 {
     font-size: 3rem;
   }
 }
 
 @media (max-width: 992px) {
-  .text-box h1 {
+  .header-overlay h1 {
     font-size: 2.5rem;
   }
 }
 
 @media (max-width: 768px) {
-  .text-box {
-    max-width: 100%;
+  .header-image {
+      height: 250px; /* Adjust height for mobile view */
   }
-
-  .text-box h1 {
+  .header-overlay {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.8);
+      position: relative;
+      height: 100%;
+  }
+  .header-overlay h1 {
     font-size: 2rem;
   }
 }
 
-h1 {
-  font-style: normal;
-  color: #333333;
+.subhead, .full-width-content {
+  background-color: #f8f9fa;
+  padding: 2rem;
 }
 
-.banner {
-  background-color: transparent;
-  height: 60vh;
-  color: #333333;
+.content {
+  padding: 2rem;
+}
+
+.content .col {
+  padding: 1rem;
+  background-color: #e9ecef;
+  border: 1px solid #dee2e6;
+}
+
+.grid-lines .col {
+  outline: 1px solid #333;
+}
+
+.artist-bio {
+  padding: 2rem;
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
 }
 
-.content-section {
-  padding: 2rem 0;
-  color: #333333;
-}
-
-.content-section.section2 {
-  background-color: transparent;
-}
-
-.section-title {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #333333;
+.artist-bio img {
+  max-width: 150px;
+  margin-right: 2rem;
 }
 
 footer {
@@ -113,21 +116,35 @@ footer .social-icons a {
   color: #333333;
 }
 
-.button {
-  background-color: #333333;
-  border: none;
-  color: #FFFFFF;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-  font-size: 1rem;
-  cursor: pointer;
-  text-align: center;
-  display: inline-block;
-  text-decoration: none;
+.btn-primary {
+  background-color: #5a5a5a; /* Custom background color */
+  border-color: #4a4a4a; /* Custom border color */
+  color: #ffffff; /* Custom text color */
+  padding: 0.5rem 1rem; /* Custom padding */
+  border-radius: 0.25rem; /* Custom border radius */
+  font-size: 1rem; /* Custom font size */
 }
 
-.button:hover {
-  background-color: #1A1A1A;
+.btn-primary:hover {
+  background-color: #4a4a4a; /* Custom background color on hover */
+  border-color: #3a3a3a; /* Custom border color on hover */
+}
+
+.btn-primary:focus, .btn-primary.focus {
+  background-color: #4a4a4a; /* Custom background color on focus */
+  border-color: #3a3a3a; /* Custom border color on focus */
+  box-shadow: 0 0 0 0.2rem rgba(74, 74, 74, 0.5); /* Custom box shadow */
+}
+
+.btn-primary:active, .btn-primary.active,
+.show > .btn-primary.dropdown-toggle {
+  background-color: #3a3a3a; /* Custom background color on active */
+  border-color: #2a2a2a; /* Custom border color on active */
+}
+
+.btn-primary:active:focus, .btn-primary.active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(58, 58, 58, 0.5); /* Custom box shadow on active focus */
 }
 
 .navbar {
@@ -217,4 +234,67 @@ footer .social-icons a {
 
 .card:hover {
   transform: translateY(-5px);
+}
+
+/* Custom button styles */
+.nav-button {
+  background-color: #5a5a5a; /* Custom background color */
+  border-color: #4a4a4a; /* Custom border color */
+  color: #ffffff; /* Custom text color */
+  padding: 0.5rem 1rem; /* Custom padding */
+  border-radius: 0.25rem; /* Custom border radius */
+  font-size: 1rem; /* Custom font size */
+}
+
+.nav-button:hover {
+  background-color: #4a4a4a; /* Custom background color on hover */
+  border-color: #3a3a3a; /* Custom border color on hover */
+}
+
+.nav-button:focus, .nav-button.focus {
+  background-color: #4a4a4a; /* Custom background color on focus */
+  border-color: #3a3a3a; /* Custom border color on focus */
+  box-shadow: 0 0 0 0.2rem rgba(74, 74, 74, 0.5); /* Custom box shadow */
+}
+
+.nav-button:active, .nav-button.active,
+.show > .nav-button.dropdown-toggle {
+  background-color: #3a3a3a; /* Custom background color on active */
+  border-color: #2a2a2a; /* Custom border color on active */
+}
+
+.nav-button:active:focus, .nav-button.active:focus,
+.show > .nav-button.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(58, 58, 58, 0.5); /* Custom box shadow on active focus */
+}
+
+.primary-button {
+  background-color: #007bff; /* Custom background color */
+  border-color: #0056b3; /* Custom border color */
+  color: #ffffff; /* Custom text color */
+  padding: 0.5rem 1rem; /* Custom padding */
+  border-radius: 0.25rem; /* Custom border radius */
+  font-size: 1rem; /* Custom font size */
+}
+
+.primary-button:hover {
+  background-color: #0056b3; /* Custom background color on hover */
+  border-color: #004080; /* Custom border color on hover */
+}
+
+.primary-button:focus, .primary-button.focus {
+  background-color: #0056b3; /* Custom background color on focus */
+  border-color: #004080; /* Custom border color on focus */
+  box-shadow: 0 0 0 0.2rem rgba(0, 91, 187, 0.5); /* Custom box shadow */
+}
+
+.primary-button:active, .primary-button.active,
+.show > .primary-button.dropdown-toggle {
+  background-color: #004080; /* Custom background color on active */
+  border-color: #00264d; /* Custom border color on active */
+}
+
+.primary-button:active:focus, .primary-button.active:focus,
+.show > .primary-button.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 38, 77, 0.5); /* Custom box shadow on active focus */
 }
