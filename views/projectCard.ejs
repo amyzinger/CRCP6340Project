@@ -1,13 +1,14 @@
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
-<div class="card m-2 h-90 fadein" style="border: 1px solid #ddd; border-radius: 0; overflow: hidden;">
-  <div class="card-img-container" style="height: 300px; overflow: hidden; border-bottom: 1px solid #ddd;">
-    <img src="<%= image %>" class="card-img-top" alt="An image of the <%= name %> project" style="object-fit: cover; border-radius: 0; width: 100%; height: 100%;">
+<a href="/project/<%= ident %>" class="card-link" style="color: inherit; text-decoration: none; display: block;">
+  <div class="card m-2 h-90 fadein" style="border: 1px solid #ddd; border-radius: 0; overflow: hidden;">
+    <div class="card-img-container" style="height: 300px; overflow: hidden; border-bottom: 1px solid #ddd;">
+      <img src="<%= image %>" class="card-img-top" alt="An image of the <%= name %> project" style="object-fit: cover; border-radius: 0; width: 100%; height: 100%;">
+    </div>
+    
+    <div class="card-body" style="text-align: left;">
+      <h5 class="card-title"><%= name %></h5>
+      <h6 class="card-subtitle mb-2 text-muted">Quantity: <%= quantity %></h6>
+    </div>
   </div>
-  
-  <div class="card-body" style="text-align: left;">
-    <h5 class="card-title"><%= name %></h5>
-    <h6 class="card-subtitle mb-2 text-muted">Quantity: <%= quantity %></h6>
-    <a href="/project/<%= ident %>" class="card-link" style="color: #333333; text-decoration: none; font-weight: bold;">View Art</a>
-  </div>
-</div>
+</a>
