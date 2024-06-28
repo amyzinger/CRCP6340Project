@@ -16,9 +16,9 @@ html, body {
 .header-image {
   background: url('/images/bg_image.webp') repeat center center;
   background-size: auto;
-  height: 500px; /* Fixed height */
+  height: 500px; 
   position: relative;
-  width: 100%; /* Ensure full width */
+  width: 100%; 
   overflow: hidden; /* Prevent any overflow */
 }
 
@@ -28,7 +28,7 @@ html, body {
   top: 0;
   left: 0;
   width: 50%;
-  height: 100%; /* Ensures overlay covers the entire header-image height */
+  height: 100%; 
   padding: 2rem;
   display: flex;
   align-items: center;
@@ -65,6 +65,24 @@ html, body {
     font-size: 2rem;
   }
 }
+
+.page-head {
+  background-color: #f8f9fa; 
+  height: 150px; 
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 15px; 
+  width: 100%; 
+  margin-top: 100px; 
+}
+
+.page-head h1 {
+  font-size: 3rem; 
+  margin: 0;
+}
+
+
 
 .light-grey {
   background-color: #f8f9fa;

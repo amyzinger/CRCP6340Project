@@ -5,8 +5,6 @@ import dotenv from "dotenv";
 dotenv.config();
 import cors from "cors";
 
-let projects = [];
-
 const app = express();
 app.use(cors());
 const port = 3000;
@@ -14,15 +12,24 @@ app.set("view engine", "ejs");
 app.use(express.json());
 app.use(express.static("public"));
 
-// Common handler function to render pages with projects data
-async function renderProjectsPage(req, res, next, template, limit = null) {
+async function renderProjectsPage(req, res, next, template, limit = null, includeFeatured = false, excludeFeatured = false) {
   try {
     await db.connect();
     let projects = await db.getAllProjects();
     if (limit) {
       projects = projects.slice(0, limit);
     }
-    res.render(template, { projectArray: projects });
+
+    let featuredProject = null;
+    if (includeFeatured && projects.length > 0) {
+      let featuredRand = Math.floor(Math.random() * projects.length);
+      featuredProject = projects[featuredRand];
+      if (excludeFeatured) {
+        projects = projects.filter(p => p.id !== featuredProject.id); // Remove the featured project from the list
+      }
+    }
+
+    res.render(template, { projectArray: projects, featuredProject: featuredProject });
   } catch (error) {
     next(error);
   }
@@ -35,7 +42,7 @@ app.get("/", (req, res, next) => {
 
 // Route for the projects page
 app.get("/projects", (req, res, next) => {
-  renderProjectsPage(req, res, next, "projects.ejs");
+  renderProjectsPage(req, res, next, "projects.ejs", null, true, true);
 });
 
 // Route for individual project pages
