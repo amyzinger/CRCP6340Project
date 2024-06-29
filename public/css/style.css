@@ -1,7 +1,8 @@
+/* General styles */
 html, body {
   height: 100%;
   margin: 0;
-  overflow-x: hidden; /* Prevent horizontal overflow */
+  overflow-x: hidden; 
 }
 
 .navbar, .footer {
@@ -16,10 +17,10 @@ html, body {
 .header-image {
   background: url('/images/bg_image.webp') repeat center center;
   background-size: auto;
-  height: 500px; 
+  height: 500px;
   position: relative;
-  width: 100%; 
-  overflow: hidden; /* Prevent any overflow */
+  width: 100%;
+  overflow: hidden; 
 }
 
 .header-overlay {
@@ -53,13 +54,13 @@ html, body {
 
 @media (max-width: 768px) {
   .header-image {
-      height: 250px; /* Adjust height for mobile view */
+    height: 250px; 
   }
   .header-overlay {
-      width: 100%;
-      background: rgba(255, 255, 255, 0.8);
-      position: relative;
-      height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    position: relative;
+    height: 100%;
   }
   .header-overlay h1 {
     font-size: 2rem;
@@ -67,22 +68,61 @@ html, body {
 }
 
 .page-head {
-  background-color: #f8f9fa; 
-  height: 150px; 
+  background-color: #c0d0d3;
+  background: url('/images/bg_image.webp') repeat center center;
+  height: 150px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  padding-left: 15px; 
-  width: 100%; 
-  margin-top: 100px; 
+  position: relative;
+  width: 100%;
 }
 
-.page-head h1 {
-  font-size: 3rem; 
+.page-head-overlay {
+  background: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 35px; 
+}
+
+.page-head-overlay h1 {
+  font-size: 4rem; 
   margin: 0;
 }
 
+@media (max-width: 1200px) {
+  .page-head-overlay h1 {
+    font-size: 3rem;
+  }
+}
 
+@media (max-width: 992px) {
+  .page-head-overlay h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-head {
+    height: 100px; 
+  }
+  .page-head-overlay h1 {
+    font-size: 2rem;
+  }
+}
+
+.responsive-padding {
+  padding: 25px; 
+}
+
+.white {
+  background-color: #ffffff;
+  padding: 2rem;
+}
 
 .light-grey {
   background-color: #f8f9fa;
@@ -230,47 +270,61 @@ footer .social-icons a {
 }
 
 /* Custom button styles */
-.nav-button {
-  background-color: #5a5a5a; /* Custom background color */
-  border-color: #4a4a4a; /* Custom border color */
-  color: #ffffff; /* Custom text color */
-  padding: 0.5rem 1rem; /* Custom padding */
-  border-radius: 0.25rem; /* Custom border radius */
-  font-size: 1rem; /* Custom font size */
+.nav-button, .primary-button, .button {
+  background-color: #c0d0d3; 
+  color: #000000; 
+  padding: 0.5rem 1rem; 
+  border-radius: 0.25rem; 
+  font-size: 1rem; 
+  border: none; 
+  text-decoration: none; 
+  display: inline-block; 
+  text-align: center; 
+  cursor: pointer; 
 }
 
-.nav-button:hover {
-  background-color: #4a4a4a; /* Custom background color on hover */
-  border-color: #3a3a3a; /* Custom border color on hover */
+.nav-button:hover, .primary-button:hover, .button:hover {
+  background-color: #a3b6ba; 
 }
 
-.nav-button:focus, .nav-button.focus {
-  background-color: #4a4a4a; /* Custom background color on focus */
-  border-color: #3a3a3a; /* Custom border color on focus */
-  box-shadow: 0 0 0 0.2rem rgba(74, 74, 74, 0.5); /* Custom box shadow */
-}
-
-.nav-button:active, .nav-button.active,
-.show > .nav-button.dropdown-toggle {
-  background-color: #3a3a3a; /* Custom background color on active */
-  border-color: #2a2a2a; /* Custom border color on active */
-}
-
-.nav-button:active:focus, .nav-button.active:focus,
-.show > .nav-button.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(58, 58, 58, 0.5); /* Custom box shadow on active focus */
+.nav-button:focus, .nav-button:active, 
+.primary-button:focus, .primary-button:active,
+.button:focus, .button:active {
+  background-color: #a3b6ba; 
+  outline: none; 
+  box-shadow: none; 
 }
 
 .primary-button {
-  background-color: #4a4a4a; /* Custom background color */
-  color: #ffffff; /* Custom text color */
-  padding: 0.5rem 1rem; /* Custom padding */
-  border-radius: 0.25rem; /* Custom border radius */
-  font-size: 1rem; /* Custom font size */
+  background-color: #4a4a4a; 
+  color: #ffffff; 
+  padding: 0.5rem 1rem; 
+  border-radius: 0.25rem; 
+  font-size: 1rem; 
+  border: none; 
+  display: inline-block; 
+  text-align: center; 
+  text-decoration: none; 
 }
 
 .primary-button:hover {
-  background-color: #3a3a3a; /* Custom background color on hover */
-  color: #ffffff; /* Custom text color */
-  text-decoration: none; /* Remove underline */
+  background-color: #3a3a3a; 
+  color: #ffffff; 
+  text-decoration: none; 
+}
+
+.primary-button:focus, .primary-button:active {
+  outline: none; 
+  box-shadow: none; 
+}
+
+.text-link {
+  color: #008080; 
+  text-decoration: none; 
+  transition: color 0.3s ease; 
+}
+
+.text-link:hover {
+  color: #005757; 
+  text-decoration: none; 
 }

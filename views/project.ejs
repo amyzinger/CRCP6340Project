@@ -18,50 +18,46 @@
 
 <body class="d-flex flex-column min-vh-100">
     <!-- Navigation Bar -->
-    <%- include('navigation') %>
+    <nav role="navigation" aria-label="Main navigation">
+        <%- include('navigation') %>
+    </nav>
 
-    <!-- Main Content -->
-    <main class="flex-grow-1">
-        <section>
-            <div class="row text-center justify-content-center">
-                <div class="col-10 mb-5">
-                    <div class="row justify-content-center">
-                        <div class="col-12 col-md-4 mt-4">
-                            <div class="card m-2">
-                                <img src="<%=project.img_url%>" class="card-img-top" alt="Project Image" />
-                                <div>
-                                    <div class="card-title">
-                                        <h2><%=project.project_name%></h2>
-                                    </div>
-                                </div>
-                                <div class="card-footer">
-                                    <a id="mint-button" class="button">Mint</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-10 col-md-6 mt-2 text-start">
-                            <p><h3 class="topic">Project name: </h3><%=project.project_name%></p>
-                            <p><h3 class="topic">Project description: </h3><%=project.project_description%></p>
-                            <div class="row">
-                                <div class="col-5">
-                                    <h3 class="topic">Price in ETH: </h3><%=project.price_eth%>
-                                </div>
-                                <div class="col-5">
-                                    <h3 class="topic">Quantity: </h3><%=project.quantity%>
-                                </div>
-                            </div>
-                            <p><h3 class="topic">Opening date: </h3><%=project.open_date_gmt%></p>
-                            <p><h3 class="topic">Royalties: </h3>The artist will get <%=project.royalty_percent%>% of secondary sales</p>
-                            <p><h3 class="topic">Status: </h3>Active - 0 of <%=project.quantity%> minted</p>
-                        </div>
-                    </div>
+    <!-- Spacer Div -->
+    <!-- <div style="height: 80px;" aria-hidden="true"></div> -->
+
+    <!-- Page Head -->
+    <header class="page-head" role="banner">
+        <div class="page-head-overlay">
+            <h1 class="display-3"><b>About the Art</b></h1>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <main class="light-grey flex-grow-1" aria-labelledby="project-details">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 responsive-padding">
+                    <img src="<%= project.img_url %>" alt="Image of <%= project.project_name %>" class="img-fluid">
+                </div>
+
+                <div class="col-md-6">
+                    <h2 id="project-details"><%= project.project_name %></h2>
+                    <p><%= project.project_description %></p>
+                    <p><strong>Price (ETH):</strong> <%= project.price_eth %></p>
+                    <p><strong>Quantity:</strong> <%= project.quantity %></p>
+                    <p><strong>Opening Date (GMT):</strong> <%= project.open_date_gmt %></p>
+                    <p><strong>Royalties:</strong> The artist will get <%= project.royalty_percent %>% of secondary sales</p>
+                    <p><strong>Status:</strong> Active - 0 of <%= project.quantity %> minted</p>
+                    <a href="#" class="primary-button" aria-label="Mint <%= project.project_name %>">Mint Now</a>
                 </div>
             </div>
-        </section>
+        </div>
     </main>
 
     <!-- Footer -->
-    <%- include('footer') %>
+    <footer role="contentinfo">
+        <%- include('footer') %>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
