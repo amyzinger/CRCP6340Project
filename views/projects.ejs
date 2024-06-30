@@ -41,7 +41,7 @@
           </div>
           <div class="col-md-6">
             <h3 id="featured-project">Featured: <%= featuredProject.project_name %></h3>
-            <p><%= featuredProject.project_description %></p>
+            <p><%= featuredProject.short_description %></p>
             <p><strong>Quantity:</strong> <%= featuredProject.quantity %></p>
             <p><strong>Price (ETH):</strong> <%= featuredProject.price_eth %></p>
             <p><strong>Open Date (GMT):</strong> <%= new Date(featuredProject.open_date_gmt).toLocaleString() %></p>
